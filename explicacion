@@ -1,0 +1,91 @@
+
+Explicación 1:
+
+Línea 1 se importa sqlite3
+
+Línea 3 y 5 se conecta y crea la BD
+
+Línea 7 Se crea la tabla "friends" 
+
+Linea 9 se inserta un valor a la tabla
+
+Línea 12 se crea una lista para insertar varios registros.
+
+Línea 21 se define una query para insertar valores, los signos ? se refieren a los campos que se insertarán
+
+Línea 23 con la función executemany se le pasan 2 argumentos que son query de la linea  
+
+Línea 25 es otra forma de iterar o mostrar los valores de la tabla friends
+
+Hasta aquí se insertan valores, después en las siguientes líneas se seleccionan o leen, para  esto no se necesita el código anterior ya que se ejecutaría por segunda vez, así que se comenta.
+
+La línea 31 y 33 es para hacer un commit o sea guardar y  cerrar la bd después de que fue utilizada.
+
+--------------------------------------------------
+
+Explicación 2 
+
+Foto 1:
+
+Línea 2 se importa sqlite3
+
+Línea 4 y 6 se conecta y crea la BD
+
+Línea 7 Se crea la tabla "friends"
+
+Línea 11 a la 15 se crea la tabla usuarios con sus campos y tipos de datos, de aquí lo importante es que dni es un ID y debería ser una LLAVE PRIMARIA que posteriormente servirán si se quieren hacer relaciones
+
+La línea 17 se define una lista de usuarios con su información  y el la 22 se insertan en la tabla usuarios y los valores con el signo ? esto es porque es más seguro de la manera en que python lo hace, si se hiciera con sql podría haber problemas de seguridad.
+
+La línea 23 se insertan los valores de otra manera, sin embargo no es buena práctica hacerlo de este modo.
+ 
+Por último se guarda y cierra conexión con la bd.
+
+Foto 2:
+
+Al igual que la foto anterior en las primeras líneas se crea la tabla y se conecta.
+
+En la 7 se crea la tabla productos pero en el campo ID se agrega AUTOINCREMENT para que al insertar el id aumente sin necesidad de pasarle el valor 1, 2, 3 etc. 
+
+En la 13 se crea la lista productos y en la 17 se insertan los valores el primero es nulo porque el autoincrement se encarga de asignar este valor
+
+En la 19 se seleccionan los productos.
+
+En la 21 se sirven o se muestran los valores al usuario lo mismo hace la ína 23
+
+Por último se guarda y cierra conexión con la bd.
+
+Foto 5.1:
+
+Es el mismo ejercicio de la foto uno solo que en la línea 10 el dni se agrega el constraint UNIQUE esto por si se tiene campos que no se pueden repetir a difenrencia de la PK esta solo se puede tener una vez.
+
+Explicación 3
+
+Foto 1:
+
+En la línea 24 se selecciona un usuario en específico con la clausula WHERE que es una condición.
+
+En la 26 se sirve el resultado al ser uno se una fetchone y se imprime en la 27
+
+El demás código es comentado por que ya corrió anteriormente y la información ya está en la base de datos solo es de hacer queries.
+
+Foto 3
+
+La línea 26 se hace un UPDATE en la tabla usuario y se establece el valor por el que se cambiará. 
+
+Foto 5
+	
+La línea 30 se insertan valores y en la 32 se iteran todos los valores de la tabla usuarios
+
+En la línea 35 se borra el registro creado y en la 39 se devuelven los datos de la tabla usuario pero esta vez sin ese usuario creado.
+
+Por último se guarda y cierra conexión con la bd.
+
+
+
+
+
+
+
+
+
